@@ -6,7 +6,8 @@ import { render } from '@testing-library/react';
 class App extends Component {
 
   // This will call the API
-  getRecipe() {
+  getRecipe = (e) => {
+    e.preventDefault(); 
     console.log("Working")
   };
 
