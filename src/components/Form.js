@@ -4,7 +4,11 @@ import React from 'react';
 // props is calling getRecipe which I added to Form in app
 const Form = props => (
     <form onSubmit={props.getRecipe}>
-        <input type="text" />
+        <input 
+        type="text"
+        // giving it a name means we can reference it in the getRecipe function in App
+        name="recipeName"
+         />
         <button>Search</button>
     </form>
 );

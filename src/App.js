@@ -7,8 +7,10 @@ class App extends Component {
 
   // This will call the API
   getRecipe = (e) => {
+    // recipeName takes what the user submits in the form in Form
+    const recipeName = e.target.elements.recipeName.value
     e.preventDefault(); 
-    console.log("Working")
+    console.log(recipeName)
   };
 
  render() { 
