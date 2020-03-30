@@ -5,6 +5,10 @@ import { render } from '@testing-library/react';
 
 class App extends Component {
 
+
+  // spoonacular api key: 234e1bdf12894e93904c85f10f3ab6e0
+  // https://api.spoonacular.com/recipes/search?apiKey=234e1bdf12894e93904c85f10f3ab6e0&q=chicken returns meals with chicken
+
   // This will call the API
   getRecipe = (e) => {
     // recipeName takes what the user submits in the form in Form
