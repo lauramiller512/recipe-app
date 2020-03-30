@@ -13,7 +13,10 @@ class App extends Component {
     // recipeName takes what the user submits in the form in Form
     const recipeName = e.target.elements.recipeName.value
     e.preventDefault(); 
-    const api_call = await fetch(`https://api.spoonacular.com/recipes/search?apiKey=${API_KEY}&q=chicken`);
+    const api_call = await fetch(`https://cors-anywhere.herokuapp.com/https://api.spoonacular.com/recipes/search?apiKey=${API_KEY}&q=chicken`);
+  
+    const data = await api_call.json();
+    console.log(data);
   };
 
  render() { 
