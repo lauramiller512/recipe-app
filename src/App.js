@@ -20,8 +20,7 @@ class App extends Component {
     const api_call = await fetch(`https://cors-anywhere.herokuapp.com/https://api.spoonacular.com/recipes/search?apiKey=${API_KEY}&q=chicken`);
   
     const data = await api_call.json();
-    this.setState({ recipes: data });
-    console.log(this.state.recipes);
+    this.setState({ recipe: data.recipe });
   };
 
  render() { 
@@ -33,6 +32,9 @@ class App extends Component {
       {/* getRecipe is the name of the prop; this.getRecipe refers to this app component, and the function within it */}
       {/* This is how we pass the getRecipe function to the Form component */}
       <Form getRecipe={this.getRecipe}/>
+      { this.state.recipes.map((recipe) => {
+        return <p key={recipe.id}>{ recipe.title }</p>
+      })}
     </div>
   );
  };
